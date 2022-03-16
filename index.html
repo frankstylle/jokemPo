@@ -16,7 +16,7 @@
 
       <!-- FRANKLIN -->
       <div id="jogador">
-        <h2 id="jogador-nome">Franklin</h2>
+        <h2 id="jogador-nome">Jogador 1</h2>
         <span id="jogador-pontos">0</span>
 
         <ul id="jogador-escolha">
@@ -98,16 +98,16 @@
       document.getElementById("computador-escolha" + computadorEscolha).classList.add('selecionado');
 
       if(ganhador == 0) {
-        document.getElementById('mensagens').innerHTML = 'Empate';
+        document.getElementById('mensagens').innerHTML = 'Empate!';
       }
       
       else if(ganhador == 1) {
-        document.getElementById('mensagens').innerHTML = 'Jogador ganhou';
+        document.getElementById('mensagens').innerHTML = 'Você ganhou, Parabéns!';
         jogadorPontuacao++;
       }
       
       else if(ganhador == 2) {
-        document.getElementById('mensagens').innerHTML = 'Computador ganhou';
+        document.getElementById('mensagens').innerHTML = 'Ha que pena, Computador ganhou!';
         computadorPontuacao++;
       }
       
