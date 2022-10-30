@@ -1,92 +1,113 @@
 * {
-  font-family: Helvetica;
-  font-weight: 400;
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:wght@400;500;700&display=swap');
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* navbar | inicio */
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    /* background: #00804b; */
+    padding: 30px 0;
+    font-family:'Ubuntu', sans-serif;
+}
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: white;
+    font-size: 35px;
+    font-weight: 500;
+}
+.navbar .logo a span {
+    color: #00804b
+}
+.navbar .menu li{
+    list-style:none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover {
+    color: #00804b;
+}
+/* home | inicio */
+.home {
+    display:  flex;
+    background: url(img/imagem1.png) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    color: #FFF;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-#titulo {
-  color: #0984e3;
-  text-align: center;
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 500;
+    margin-left: -3px;
+}
+.home .home-content .text-3 {
+    font-size: 25px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: #00804b;
+    font-weight: 500;
 }
 
-#placar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@media(max-width: 395px) {
+    .navbar .max-width{
+        position: relative;
+    }
+    .logo a{
+        position: absolute;
+        left: 10px;
+    }
+    .navbar .menu {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 50px;
+        left: 5px;
+    }
+    .navbar .menu li {
+        margin: 5px 0;
+    }
 
-#jogador, #computador {
-  position: relative;
-  flex-grow: 1;
-  border-radius: 5px;
-  width: 200px;
-  padding: 20px;
-  color: #fff;
-}
-
-#jogador {
-  background-color: #ff7675;
-}
-
-#computador {
-  background-color: #74b9ff;
-}
-
-#versus {
-  width: 70px;
-  font-size: 40px; 
-  text-align: center;
-}
-
-#jogador-nome, #computador-nome {
-  margin: 0px;
-  padding: 0px;
-}
-
-#jogador-nome {
-  text-align: left;
-}
-
-#jogador-pontos, #computador-pontos {
-  position: absolute;
-  top: 8px;
-  font-size: 32px;
-}
-
-#jogador-pontos {
-  right: 20px;
-}
-
-#computador-nome {
-  text-align: right;
-}
-
-ul#jogador-escolha , ul#computador-escolha {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-ul#jogador-escolha li , ul#computador-escolha li {
-  display:inline;
-}
-
-ul#jogador-escolha li a, ul#computador-escolha li a {
-  opacity: .2;
-}
-
-ul#jogador-escolha li a:hover, ul#jogador-escolha li a.selecionado, ul#computador-escolha li a.selecionado {
-  opacity: 1;
-}
-
-ul#jogador-escolha li a img, ul#computador-escolha li a img {
-  max-width: 80px;
-}
-
-#mensagens {
-  font-size: 32px;
-  background-color: #b2bec3;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 40px 0;
+    .home {
+        display:  flex;
+        flex-direction: column;
+        background: url(img/franklin.png) no-repeat top;
+        background-size: cover;
+        background-position: top;
+        height: 100vh;
+        color: #FFF;
+        min-height: 500px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    .home-content {
+        position: absolute;
+        left: 15%;
+    }
 }
